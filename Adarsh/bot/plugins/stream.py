@@ -122,8 +122,10 @@ async def private_receive_handler(c: Client, m: Message):
             
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⚡ ᴡᴀᴛᴄʜ ⚡", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('⚡ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥 STREAM 🖥", url=stream_link)], #Stream Link
+
+                                                [InlineKeyboardButton('📥 DOWNLOAD 📥', url=online_link)]]) #Download Link
+
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
